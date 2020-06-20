@@ -61,7 +61,6 @@ import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
 import net.minecraftforge.common.crafting.conditions.TrueCondition;
 import net.minecraftforge.common.data.ForgeBlockTagsProvider;
 import net.minecraftforge.common.data.ForgeItemTagsProvider;
-import net.minecraftforge.common.data.ForgeLootTableProvider;
 import net.minecraftforge.common.data.ForgeRecipeProvider;
 import net.minecraftforge.common.model.animation.CapabilityAnimation;
 import net.minecraftforge.energy.CapabilityEnergy;
@@ -181,7 +180,6 @@ public class ForgeMod implements WorldPersistenceHooks.WorldPersistenceHook
             gen.addProvider(new ForgeBlockTagsProvider(gen));
             gen.addProvider(new ForgeItemTagsProvider(gen));
             gen.addProvider(new ForgeRecipeProvider(gen));
-            gen.addProvider(new ForgeLootTableProvider(gen));
         }
     }
 
