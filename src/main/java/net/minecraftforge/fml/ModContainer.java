@@ -21,6 +21,7 @@ package net.minecraftforge.fml;
 
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.config.gui.ConfigTypeScreen;
 import net.minecraftforge.forgespi.language.IModInfo;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -72,6 +73,8 @@ public abstract class ModContainer
         // default displaytest extension checks for version string match
         registerExtensionPoint(ExtensionPoint.DISPLAYTEST, () -> Pair.of(()->this.modInfo.getVersion().toString(),
                 (incoming, isNetwork)->Objects.equals(incoming, this.modInfo.getVersion().toString())));
+        // TODO register default configfactory
+        registerExtensionPoint(ExtensionPoint.CONFIGGUIFACTORY, () -> (minecraft, screen) -> new ConfigTypeScreen(configs, info, screen));
     }
 
     /**

@@ -32,6 +32,8 @@ public class ConfigGuiHandler
 {
     public static Optional<BiFunction<Minecraft, Screen, Screen>> getGuiFactoryFor(ModInfo selectedMod)
     {
+        ModList.get().getModContainerById(selectedMod.getModId()).flatMap(modContainer -> modContainer.getCustomExtension(ExtensionPoint.CONFIGGUIFACTORY));
+
         return ModList.get().getModContainerById(selectedMod.getModId()).
                 flatMap(mc -> mc.getCustomExtension(ExtensionPoint.CONFIGGUIFACTORY));
     }

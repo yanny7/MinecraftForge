@@ -585,7 +585,7 @@ public class ForgeConfigSpec extends UnmodifiableConfigWrapper<UnmodifiableConfi
     }
 
     @SuppressWarnings("unused")
-    private static class Range<V extends Comparable<? super V>> implements Predicate<Object>
+    public static class Range<V extends Comparable<? super V>> implements Predicate<Object>
     {
         private final Class<? extends V> clazz;
         private final V min;
@@ -813,9 +813,9 @@ public class ForgeConfigSpec extends UnmodifiableConfigWrapper<UnmodifiableConfi
     }
 
     private static final Joiner LINE_JOINER = Joiner.on("\n");
-    private static final Joiner DOT_JOINER = Joiner.on(".");
+    public static final Joiner DOT_JOINER = Joiner.on(".");
     private static final Splitter DOT_SPLITTER = Splitter.on(".");
-    private static List<String> split(String path)
+    public static List<String> split(String path)
     {
         return Lists.newArrayList(DOT_SPLITTER.split(path));
     }

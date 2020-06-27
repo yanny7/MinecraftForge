@@ -285,7 +285,6 @@ public class ModListScreen extends Screen
         y -= 20 + PADDING;
         this.addButton(this.configButton = new Button(6, y, this.listWidth, 20,
                 I18n.format("fml.menu.mods.config"), b -> ModListScreen.this.displayModConfig()));
-        this.configButton.active = false;
 
         y -= 14 + PADDING + 1;
         search = new TextFieldWidget(getFontRenderer(), PADDING + 1, y, listWidth - 2, 14, I18n.format("fml.menu.mods.search"));

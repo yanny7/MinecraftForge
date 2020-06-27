@@ -155,5 +155,12 @@
 
   "forge.container.enchant.limitedEnchantability": "Limited Enchantability",
   "attribute.name.generic.reachDistance": "Reach Distance",
-  "attribute.name.forge.swimSpeed": "Swim Speed"
+  "attribute.name.forge.swimSpeed": "Swim Speed",
+
+  "fml.config.gui.title": "Mod Configuration",
+  "fml.config.gui.type.common": "Both",
+  "fml.config.gui.type.client": "Client",
+  "fml.config.gui.type.server": "Server",
+  "fml.config.gui.reset": "Undo Changes",
+  "fml.config.gui.name": "§l§e{0}§6 Mod Configuration"
 }
